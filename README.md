@@ -1,35 +1,28 @@
-# Canadian Cannabis Market Analysis
+# Canadian Cannabis Sales After Legalization
 
-A province-year exploratory analysis of Canadian cannabis sales and related
-economic, demographic, and public-safety measures before and after recreational
-cannabis legalization in 2018.
+A province and year analysis of cannabis sales and related indicators, built for a data management and data science course at Berry College.
 
-## Analysis
+## Question
 
-The notebook cleans a panel dataset, standardizes field names and types,
-constructs total and per-capita cannabis-sales measures, and visualizes sales
-and selected provincial indicators over time. Missing 2022–2024 tax-rate and
-licensing-fee values are carried forward from 2021 within province; missing or
-zero police rates are imputed using each province's mean.
+How have cannabis sales, and the economic, demographic, and public safety measures alongside them, differed across Canadian provinces since recreational legalization in 2018?
 
-These are descriptive comparisons, not causal estimates. The data do not
-directly measure youth cannabis use, and pre/post differences may reflect
-other changes over time.
+## Why it matters
+
+Canada legalized nationally in 2018, so provincial data offers a view of how a newly legal market develops and how it varies with local conditions.
+
+## Approach
+
+The notebook cleans a panel dataset, standardizes field names and types, builds total and per capita sales measures, and plots sales and selected provincial indicators over time. Missing 2022 to 2024 tax rate and licensing fee values are carried forward from 2021 within province. Missing or zero police rates are replaced with each province's mean.
+
+The analysis is descriptive. Pre and post comparisons may reflect other changes over time, and the data do not measure youth cannabis use directly.
 
 ## Data
 
-The source CSV and course handouts are not included. The source folder did not
-contain a complete data citation or redistribution terms, so users must
-identify and cite the original sources and verify their terms before using or
-sharing a dataset. To run the notebook, place an appropriately licensed file at
-`data/cannabis_canada.csv` using the columns in the original compiled dataset.
+The source file is not included because its original citation and redistribution terms were not available. To run the notebook, add a licensed copy at `data/cannabis_canada.csv` with the columns used in `analysis.ipynb`, and cite the original sources.
 
-## Run the notebook
+## Run
 
 ```bash
 python -m pip install -r requirements.txt
 jupyter lab analysis.ipynb
 ```
-
-The notebook has no saved outputs because the underlying data is not
-distributed with this repository.
